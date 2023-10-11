@@ -20,10 +20,10 @@ pipeline {
         stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
-                sh '''
+                sh '''''
                 touch jk.txt
                 pwd
-                '''
+                '''''
                 echo "Biography: ${params.BIOGRAPHY}"
                 echo "your jenkins home is -> ${JENKINS_HOME}"
                 echo "Toggle: ${params.TOGGLE}"
