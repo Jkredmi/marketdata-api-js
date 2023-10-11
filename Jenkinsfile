@@ -26,7 +26,7 @@ pipeline {
                 '''
 
                 echo "Biography: ${params.BIOGRAPHY}"
-
+                echo "your jenkins home is -> $(JENKINS_HOME)"
                 echo "Toggle: ${params.TOGGLE}"
 
                 echo "Choice: ${params.CHOICE}"
