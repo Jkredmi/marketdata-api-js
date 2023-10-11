@@ -2,7 +2,7 @@ pipeline {
     agent {
      node {
          label 'built-in'
-         customworksapce '/home/ec2-user'
+         customWorksapce '/home/ec2-user'
      }
     }
         parameters {
