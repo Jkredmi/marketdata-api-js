@@ -1,6 +1,11 @@
 pipeline {
-    agent any
-    parameters {
+    agent {
+     node {
+         label 'built-in'
+         customworksapce '/home/ec2-user'
+     }
+    }
+        parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
