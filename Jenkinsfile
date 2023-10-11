@@ -20,6 +20,10 @@ pipeline {
         stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
+                sh '''
+                touch jk.txt
+                pwd
+                '''
 
                 echo "Biography: ${params.BIOGRAPHY}"
 
