@@ -24,13 +24,10 @@ pipeline {
                 touch jk.txt
                 pwd
                 '''
-
                 echo "Biography: ${params.BIOGRAPHY}"
                 echo "your jenkins home is -> ${JENKINS_HOME}"
                 echo "Toggle: ${params.TOGGLE}"
-
                 echo "Choice: ${params.CHOICE}"
-
                 echo "Password: ${params.PASSWORD}"
             }
         }
