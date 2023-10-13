@@ -1,35 +1,29 @@
 pipeline {
     agent {
-     node {
-         label 'built-in'
-         customWorkspace '/home/ec2-user'
-     }
-    }
-        parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-
-        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
-
-        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
-
-        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-    }
-    stages {
-        stage('Example') {
-            steps {
-                echo "Hello ${params.PERSON}"
-                sh '''
-                touch jk.txt
-                pwd
-                '''
-                echo "Biography: ${params.BIOGRAPHY}"
-                echo "your jenkins home is -> ${JENKINS_HOME}"
-                echo "Toggle: ${params.TOGGLE}"
-                echo "Choice: ${params.CHOICE}"
-                echo "Password: ${params.PASSWORD}"
-            }
-        }
-    }
-}
+    node {
+	label 'built-in'
+	customeWorkspace '/home/ec2-user'
+	}
+	}
+	parameters {
+	string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'who should i say hello to?')
+	}
+	stages {
+	stage ('checkout') {
+	steps {
+	echo "Hello ${params.PERSON}"
+	}
+	}
+	stage ('build') {
+	steps {
+	echo "Hello ${params.PERSON}"
+	}
+	}
+	stage ('Deploy') {
+	steps {
+	echo " Hello ${params.PERSON}"
+	}
+	}
+	}
+	}
+	
