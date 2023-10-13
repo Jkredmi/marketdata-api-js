@@ -11,17 +11,14 @@ pipeline {
 	stages {
 	stage ('checkout') {
 	steps {
-	
 	}
 	}
 	stage ('build') {
 	steps {
-	
 	}
 	}
 	stage ('Deploy') {
 	steps {
-	
 	}
 	}
 	}
