@@ -11,17 +11,17 @@ pipeline {
 	stages {
 	stage ('checkout') {
 	steps {
-	echo "Hello ${params.PERSON}"
+	
 	}
 	}
 	stage ('build') {
 	steps {
-	echo "Hello ${params.PERSON}"
+	
 	}
 	}
 	stage ('Deploy') {
 	steps {
-	echo " Hello ${params.PERSON}"
+	
 	}
 	}
 	}
