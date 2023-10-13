@@ -8,8 +8,8 @@ pipeline {
 	stages {
 	stage ('checkout') {
 	steps {
-		git clone https://github.com/Jkredmi/game-of-life.git
-			cd game-of-life
+	git clone https://github.com/Jkredmi/game-of-life.git
+	cd game-of-life
 	}
 	}
 	stage ('build') {
